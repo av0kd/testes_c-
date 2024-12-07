@@ -12,7 +12,7 @@ int main()
     int cl, cc, nMat[MAX][MAX];
     cin >> cl >> cc;
     defMatr(nMat, cl, cc);
-    cout << (contZeros(nMat, cl, cc, cc)*100)/float(cl*cc) << "% da matriz eh composta por 0.";
+    cout << (contZeros(nMat, cl, cc, cc)*100.0)/(cl*cc) << "% da matriz eh composta por 0.";
     return 0;
 }
 
