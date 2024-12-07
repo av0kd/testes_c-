@@ -29,8 +29,8 @@ int contZeros(int mat [][MAX], int qL, int qC, int cFix){
         return 0;
     }
     else{
-        if(qC == 1){
-            return mat[qL-1][qC-1] == 0?1+contZeros(mat, qL-1, cFix, cFix):0+contZeros(mat, qL-1, cFix, cFix);
+        if(qC == 0){
+            return contZeros(mat, qL-1, cFix, cFix);
         }
         else{
             return mat[qL-1][qC-1] == 0?1+contZeros(mat, qL, qC-1, cFix):0+contZeros(mat, qL, qC-1, cFix);
