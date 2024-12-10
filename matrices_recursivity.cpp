@@ -9,10 +9,12 @@ int contZeros(int mat [][MAX], int qL, int qC, int cFix);
 
 int main()
 {
-    int cl, cc, nMat[MAX][MAX];
+    int cl, cc, contZero, nMat[MAX][MAX];
     cin >> cl >> cc;
     defMatr(nMat, cl, cc);
-    cout << (contZeros(nMat, cl, cc, cc)*100.0)/(cl*cc) << "% da matriz eh composta por 0.";
+    if(cc != 0 || cl != 0){
+        cout << (contZeros(nMat, cl, cc, cc)*100.0)/(cl*cc) << "% da matriz eh composta por 0.\n";
+    }
     return 0;
 }
 
