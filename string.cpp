@@ -13,9 +13,10 @@ void rmStringFlaws(char str[]);
 bool isStringPolindrome(char str[]);
 
 int main (){
-    char str [SMAX] = "";
-    cin.getline(str, SMAX);
-    isStringPolindrome(str)?cout << "Polindrome" << endl: cout << "Nao polindrome" << endl;
+    char str [SMAX] = "a";
+    char str2 [SMAX] = "c";
+    cout << getStringCompared(str,str2) << endl << strcmp(str,str2);
+    
     return 0;
 }
 
