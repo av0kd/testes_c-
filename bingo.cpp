@@ -3,7 +3,7 @@
 
 using namespace std;
 
-const int NMAX = 50;
+const int NMAX = 75;
 const int CMAX = 5;
 
 struct jogador
@@ -13,6 +13,8 @@ struct jogador
     bool marcados [CMAX][CMAX] = {0};
 };
 
+void playerRegister(jogador j[NMAX], int n);
+int allMarked(jogador j[NMAX], int n);
 void newCartela(int c[CMAX][CMAX]);
 void showCartela(int c[CMAX][CMAX]);
 void vectSort(int c[CMAX][CMAX]);
@@ -22,15 +24,36 @@ int main(){
     int n;
     cout << "Insira a quantidade de jogadores: \n";
     cin >> n;
-    cin.ignore();
-
-    for (int i = 0; i < n; i++){
-        cout << "\nNome do jogador " << i+1 << ":  ";
-        cin.getline(jog[i].nome, NMAX);
-        newCartela(jog[i].cartela);
+    playerRegister(jog, n);
+    int venceu = allMarked(jog, n);
+    if((venceu)){
+        cout<< "\nPressione '1' para continuar! ";
+        cin;    
     }
     
+    
+
+
+
     return 0;
+}
+
+
+
+int allMarked(jogador j[NMAX], int n){
+    if
+}
+
+void playerRegister(jogador j[NMAX], int n){
+    cin.ignore();
+    for (int i = 0; i < n; i++){
+        cout << "\n-----------------------------------------------\nNome do jogador " << i+1 << ":  ";
+        cin.getline(j[i].nome, NMAX);
+
+        cout << "\nCartela de " << j[i].nome <<": \n\n";
+        newCartela(j[i].cartela);
+    }
+    cout << "\n-----------------------------------------------\n";
 }
 
 void newCartela(int c[CMAX][CMAX]){
